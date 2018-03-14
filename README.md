@@ -17,7 +17,7 @@ Objective of this challenge is to evaluate your domain in **Quality Assurance**,
 
 ## The challenge
 
-- Design testcase and prepare test scipt to validate authentication process on [(https://staging.fastwork.co)](https://staging.fastwork.co) website **(sign up with email, sign in with email)**.
+- Design testcase and prepare test scipt to validate authentication process on [https://staging.fastwork.co](https://staging.fastwork.co) website **(sign up with email, sign in with email)**.
 - Design testcase and prepare test scipt to validate search system ex. [https://staging.fastwork.co/search?q=test](https://staging.fastwork.co/search?q=test)
 
 ## Readme
