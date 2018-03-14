@@ -8,7 +8,7 @@ Objective of this challenge is to evaluate your domain in **Quality Assurance**,
 
 ## Rules
 
-1. Please **organize, design testcase, code test scipt** and deploy your code as if it were going into production, then send us a link to the hosted repository (e.g. Github, Bitbucket...).
+1. Please **organize, design testcase, write test scipt** and deploy your code as if it were going into production, then send us a link to the hosted repository (e.g. Github, Bitbucket...).
 
 2. Develop automate testing using:
     - Some UI testing framework. Suggestion: **Robot Framework** ;
