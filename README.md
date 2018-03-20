@@ -7,5 +7,7 @@ There are 3 files for Robot Framework
 1. SearchFastwork.robot
 2. SigninFastwork.robot
 3. SignUpFastwork.robot
-***Actually, test cases and the Resource should be prepared separately but they aren't due to the time limitation***
-****Moreover, There should be more test cases but i need more time to prepare both test case and test script. So, the test cases and test scripts that I prepared only included necessary cases.****
+
+Remark
+1. Actually, test cases and the Resource should be prepared separately but they aren't due to the time limitation
+2. Moreover, There should be more test cases but i need more time to prepare both test case and test script. So, the test cases and test scripts that I prepared only included necessary cases.
