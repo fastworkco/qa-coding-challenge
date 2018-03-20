@@ -20,6 +20,10 @@ Objective of this challenge is to evaluate your domain in **Quality Assurance**,
 - Design testcase and prepare test scipt to validate authentication process on [https://staging.fastwork.co](https://staging.fastwork.co) website **(sign up with email, sign in with email)**.
 - Design testcase and prepare test scipt to validate search system ex. [https://staging.fastwork.co/search?q=test](https://staging.fastwork.co/search?q=test)
 
+## Remark
+
+- Restore database from production to staging every night.
+
 ## Readme
 
 Write your README as if it was for a production service. Include the following items:
