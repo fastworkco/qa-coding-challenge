@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180320 12:49:43.044" generator="Robot 3.0.2 (Python 2.7.13 on darwin)">
+<suite source="/Users/thunchanokkongsatchaaree/Python27/test/Search/SearchFastwork.robot" id="s1" name="SearchFastwork">
+<test id="s1-t1" name="If Search valid without login">
+<kw name="Open Web">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+</arguments>
+<msg timestamp="20180320 12:49:43.151" level="INFO">Opening browser 'chrome' to base url 'https://staging.fastwork.co/search?q'</msg>
+<status status="PASS" endtime="20180320 12:49:49.829" starttime="20180320 12:49:43.151"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>//*[@id="normal-popover"]</arg>
+</arguments>
+<status status="PASS" endtime="20180320 12:49:51.452" starttime="20180320 12:49:49.829"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20180320 12:49:52.453" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20180320 12:49:52.453" starttime="20180320 12:49:51.452"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//*[@id="onesignal-popover-cancel-button"][contains(.,'No Thank')]</arg>
+</arguments>
+<msg timestamp="20180320 12:49:52.453" level="INFO">Clicking element '//*[@id="onesignal-popover-cancel-button"][contains(.,'No Thank')]'.</msg>
+<status status="PASS" endtime="20180320 12:49:52.521" starttime="20180320 12:49:52.453"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20180320 12:49:54.523" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20180320 12:49:54.523" starttime="20180320 12:49:52.521"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>//*[@id="app"]//div[1]//div[2]/div[2]/div[contains(.,"เข้าสู่ระบบ")]</arg>
+</arguments>
+<status status="PASS" endtime="20180320 12:49:54.542" starttime="20180320 12:49:54.523"></status>
+</kw>
+<status status="PASS" endtime="20180320 12:49:54.542" starttime="20180320 12:49:43.150"></status>
+</kw>
+<kw name="Enter Search Field">
+<arguments>
+<arg>test</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>//*[@id="desktopNavigationSearch"]</arg>
+<arg>${Search}</arg>
+</arguments>
+<msg timestamp="20180320 12:49:54.543" level="INFO">Typing text 'test' into text field '//*[@id="desktopNavigationSearch"]'</msg>
+<status status="PASS" endtime="20180320 12:49:54.698" starttime="20180320 12:49:54.543"></status>
+</kw>
+<status status="PASS" endtime="20180320 12:49:54.699" starttime="20180320 12:49:54.542"></status>
+</kw>
+<kw name="Click Search Button">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//*[@id="app"]/div[2]/div[2]/div[1]/div/div[1]/div/form/div[2]/strong[contains(.,"ค้นหา")]</arg>
+</arguments>
+<msg timestamp="20180320 12:49:54.702" level="INFO">Clicking element '//*[@id="app"]/div[2]/div[2]/div[1]/div/div[1]/div/form/div[2]/strong[contains(.,"ค้นหา")]'.</msg>
+<status status="PASS" endtime="20180320 12:49:54.938" starttime="20180320 12:49:54.700"></status>
+</kw>
+<status status="PASS" endtime="20180320 12:49:54.939" starttime="20180320 12:49:54.699"></status>
+</kw>
+<kw name="Verify Total Search Result">
+<arguments>
+<arg>test</arg>
+<arg>139</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>//*[@id="app-content"]/div[2]/div[1]/div/div/h2[contains(.,'ผลการค้นหา') and contains(.,'${ResultSearch} (${TotalSearch})')]</arg>
+<arg>60s</arg>
+</arguments>
+<status status="PASS" endtime="20180320 12:49:55.805" starttime="20180320 12:49:54.939"></status>
+</kw>
+<status status="PASS" endtime="20180320 12:49:55.805" starttime="20180320 12:49:54.939"></status>
+</kw>
+<kw name="Verify Search Result">
+<arguments>
+<arg>1</arg>
+<arg>Test product</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>//*[@id="app-content"]/div[2]/div[2]/div/div[${pItem}]/div/div[2]/div[1]/a/div[contains(.,'${pExpected}')]</arg>
+<arg>60s</arg>
+</arguments>
+<status status="PASS" endtime="20180320 12:49:55.836" starttime="20180320 12:49:55.806"></status>
+</kw>
+<status status="PASS" endtime="20180320 12:49:55.836" starttime="20180320 12:49:55.805"></status>
+</kw>
+<kw name="Verify Search Result">
+<arguments>
+<arg>2</arg>
+<arg>Test ladder 3</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>//*[@id="app-content"]/div[2]/div[2]/div/div[${pItem}]/div/div[2]/div[1]/a/div[contains(.,'${pExpected}')]</arg>
+<arg>60s</arg>
+</arguments>
+<status status="PASS" endtime="20180320 12:49:55.861" starttime="20180320 12:49:55.837"></status>
+</kw>
+<status status="PASS" endtime="20180320 12:49:55.861" starttime="20180320 12:49:55.836"></status>
+</kw>
+<kw name="Verify Search Result">
+<arguments>
+<arg>3</arg>
+<arg>Test ladder 1</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>//*[@id="app-content"]/div[2]/div[2]/div/div[${pItem}]/div/div[2]/div[1]/a/div[contains(.,'${pExpected}')]</arg>
+<arg>60s</arg>
+</arguments>
+<status status="PASS" endtime="20180320 12:49:55.875" starttime="20180320 12:49:55.861"></status>
+</kw>
+<status status="PASS" endtime="20180320 12:49:55.876" starttime="20180320 12:49:55.861"></status>
+</kw>
+<kw name="Verify Search Result">
+<arguments>
+<arg>4</arg>
+<arg>Test ladder 2</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>//*[@id="app-content"]/div[2]/div[2]/div/div[${pItem}]/div/div[2]/div[1]/a/div[contains(.,'${pExpected}')]</arg>
+<arg>60s</arg>
+</arguments>
+<status status="PASS" endtime="20180320 12:49:55.890" starttime="20180320 12:49:55.876"></status>
+</kw>
+<status status="PASS" endtime="20180320 12:49:55.890" starttime="20180320 12:49:55.876"></status>
+</kw>
+<status status="PASS" endtime="20180320 12:49:55.890" critical="yes" starttime="20180320 12:49:43.149"></status>
+</test>
+<test id="s1-t2" name="If Search invalid without login">
+<kw name="Enter Search Field">
+<arguments>
+<arg>testhdbdsalmffsmk</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>//*[@id="desktopNavigationSearch"]</arg>
+<arg>${Search}</arg>
+</arguments>
+<msg timestamp="20180320 12:49:55.892" level="INFO">Typing text 'testhdbdsalmffsmk' into text field '//*[@id="desktopNavigationSearch"]'</msg>
+<status status="PASS" endtime="20180320 12:49:56.121" starttime="20180320 12:49:55.892"></status>
+</kw>
+<status status="PASS" endtime="20180320 12:49:56.121" starttime="20180320 12:49:55.892"></status>
+</kw>
+<kw name="Click Search Button">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//*[@id="app"]/div[2]/div[2]/div[1]/div/div[1]/div/form/div[2]/strong[contains(.,"ค้นหา")]</arg>
+</arguments>
+<msg timestamp="20180320 12:49:56.121" level="INFO">Clicking element '//*[@id="app"]/div[2]/div[2]/div[1]/div/div[1]/div/form/div[2]/strong[contains(.,"ค้นหา")]'.</msg>
+<status status="PASS" endtime="20180320 12:49:56.225" starttime="20180320 12:49:56.121"></status>
+</kw>
+<status status="PASS" endtime="20180320 12:49:56.225" starttime="20180320 12:49:56.121"></status>
+</kw>
+<kw name="Verify Total Search Result">
+<arguments>
+<arg>testhdbdsalmffsmk</arg>
+<arg>0</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>//*[@id="app-content"]/div[2]/div[1]/div/div/h2[contains(.,'ผลการค้นหา') and contains(.,'${ResultSearch} (${TotalSearch})')]</arg>
+<arg>60s</arg>
+</arguments>
+<status status="PASS" endtime="20180320 12:49:56.314" starttime="20180320 12:49:56.226"></status>
+</kw>
+<status status="PASS" endtime="20180320 12:49:56.314" starttime="20180320 12:49:56.225"></status>
+</kw>
+<status status="PASS" endtime="20180320 12:49:56.314" critical="yes" starttime="20180320 12:49:55.891"></status>
+</test>
+<test id="s1-t3" name="If Search valid with login">
+<kw name="Click เข้าสู่ระบบ Button">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//*[@id="app"]//div[1]//div[2]/div[2]/div[contains(.,"เข้าสู่ระบบ")]</arg>
+</arguments>
+<msg timestamp="20180320 12:49:56.318" level="INFO">Clicking element '//*[@id="app"]//div[1]//div[2]/div[2]/div[contains(.,"เข้าสู่ระบบ")]'.</msg>
+<status status="PASS" endtime="20180320 12:49:56.434" starttime="20180320 12:49:56.317"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>//*[@id="modal"]/div[2]/div/div[1]/a[contains(.,"เข้าสู่ระบบด้วย Facebook")]</arg>
+</arguments>
+<status status="PASS" endtime="20180320 12:49:56.450" starttime="20180320 12:49:56.435"></status>
+</kw>
+<status status="PASS" endtime="20180320 12:49:56.450" starttime="20180320 12:49:56.317"></status>
+</kw>
+<kw name="Click เข้าสู่ระบบ On เข้าสู่ระบบ Popup">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//*[@id="modal"]/div[2]/div/form/button[contains(.,"เข้าสู่ระบบ")]</arg>
+</arguments>
+<msg timestamp="20180320 12:49:56.452" level="INFO">Clicking element '//*[@id="modal"]/div[2]/div/form/button[contains(.,"เข้าสู่ระบบ")]'.</msg>
+<status status="PASS" endtime="20180320 12:49:56.567" starttime="20180320 12:49:56.451"></status>
+</kw>
+<status status="PASS" endtime="20180320 12:49:56.568" starttime="20180320 12:49:56.451"></status>
+</kw>
+<kw name="Enter Username On เข้าสู่ระบบ Popup">
+<arguments>
+<arg>test50@test.com</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>//*[@id="modal"]/div[2]/div/form/div[1]/div/input[@name="username" and contains(@aria-required,"true")]</arg>
+<arg>${Username}</arg>
+</arguments>
+<msg timestamp="20180320 12:49:56.569" level="INFO">Typing text 'test50@test.com' into text field '//*[@id="modal"]/div[2]/div/form/div[1]/div/input[@name="username" and contains(@aria-required,"true")]'</msg>
+<status status="PASS" endtime="20180320 12:49:56.790" starttime="20180320 12:49:56.569"></status>
+</kw>
+<status status="PASS" endtime="20180320 12:49:56.790" starttime="20180320 12:49:56.568"></status>
+</kw>
+<kw name="Enter Password On เข้าสู่ระบบ Popup">
+<arguments>
+<arg>testtest</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>//*[@id="modal"]/div[2]/div/form/div[2]/div/input[@name="password"]</arg>
+<arg>${Password}</arg>
+</arguments>
+<msg timestamp="20180320 12:49:56.791" level="INFO">Typing text 'testtest' into text field '//*[@id="modal"]/div[2]/div/form/div[2]/div/input[@name="password"]'</msg>
+<status status="PASS" endtime="20180320 12:49:56.927" starttime="20180320 12:49:56.791"></status>
+</kw>
+<status status="PASS" endtime="20180320 12:49:56.928" starttime="20180320 12:49:56.790"></status>
+</kw>
+<kw name="Click เข้าสู่ระบบ On เข้าสู่ระบบ Popup">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//*[@id="modal"]/div[2]/div/form/button[contains(.,"เข้าสู่ระบบ")]</arg>
+</arguments>
+<msg timestamp="20180320 12:49:56.929" level="INFO">Clicking element '//*[@id="modal"]/div[2]/div/form/button[contains(.,"เข้าสู่ระบบ")]'.</msg>
+<status status="PASS" endtime="20180320 12:49:57.017" starttime="20180320 12:49:56.928"></status>
+</kw>
+<status status="PASS" endtime="20180320 12:49:57.017" starttime="20180320 12:49:56.928"></status>
+</kw>
+<kw name="Verify Login Successfully">
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>//*[@id="app"]/div[2]/div[2]/div[1]/div/div[2]/div[2]/I[contains(@class,'dropdown icon')]</arg>
+<arg>60s</arg>
+</arguments>
+<status status="PASS" endtime="20180320 12:49:58.717" starttime="20180320 12:49:57.018"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//*[@id="app"]/div[2]/div[1]/div/section/div/i[@class="bio-message-close close icon _zid-1 _cs-pt"]</arg>
+</arguments>
+<msg timestamp="20180320 12:49:58.717" level="INFO">Clicking element '//*[@id="app"]/div[2]/div[1]/div/section/div/i[@class="bio-message-close close icon _zid-1 _cs-pt"]'.</msg>
+<status status="PASS" endtime="20180320 12:49:58.784" starttime="20180320 12:49:58.717"></status>
+</kw>
+<kw name="Wait Until Page Does Not Contain Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` disappears from current page.</doc>
+<arguments>
+<arg>//*[@id="app"]/div[2]/div[1]/div/section/div/i[@class="bio-message-close close icon _zid-1 _cs-pt"]</arg>
+<arg>60s</arg>
+</arguments>
+<status status="PASS" endtime="20180320 12:49:59.003" starttime="20180320 12:49:58.784"></status>
+</kw>
+<status status="PASS" endtime="20180320 12:49:59.003" starttime="20180320 12:49:57.017"></status>
+</kw>
+<kw name="Enter Search Field">
+<arguments>
+<arg>test</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>//*[@id="desktopNavigationSearch"]</arg>
+<arg>${Search}</arg>
+</arguments>
+<msg timestamp="20180320 12:49:59.004" level="INFO">Typing text 'test' into text field '//*[@id="desktopNavigationSearch"]'</msg>
+<status status="PASS" endtime="20180320 12:49:59.067" starttime="20180320 12:49:59.003"></status>
+</kw>
+<status status="PASS" endtime="20180320 12:49:59.067" starttime="20180320 12:49:59.003"></status>
+</kw>
+<kw name="Click Search Button">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//*[@id="app"]/div[2]/div[2]/div[1]/div/div[1]/div/form/div[2]/strong[contains(.,"ค้นหา")]</arg>
+</arguments>
+<msg timestamp="20180320 12:49:59.068" level="INFO">Clicking element '//*[@id="app"]/div[2]/div[2]/div[1]/div/div[1]/div/form/div[2]/strong[contains(.,"ค้นหา")]'.</msg>
+<status status="PASS" endtime="20180320 12:49:59.142" starttime="20180320 12:49:59.068"></status>
+</kw>
+<status status="PASS" endtime="20180320 12:49:59.143" starttime="20180320 12:49:59.068"></status>
+</kw>
+<kw name="Verify Total Search Result">
+<arguments>
+<arg>test</arg>
+<arg>139</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>//*[@id="app-content"]/div[2]/div[1]/div/div/h2[contains(.,'ผลการค้นหา') and contains(.,'${ResultSearch} (${TotalSearch})')]</arg>
+<arg>60s</arg>
+</arguments>
+<status status="PASS" endtime="20180320 12:50:00.153" starttime="20180320 12:49:59.144"></status>
+</kw>
+<status status="PASS" endtime="20180320 12:50:00.153" starttime="20180320 12:49:59.144"></status>
+</kw>
+<kw name="Verify Search Result">
+<arguments>
+<arg>1</arg>
+<arg>Test product</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>//*[@id="app-content"]/div[2]/div[2]/div/div[${pItem}]/div/div[2]/div[1]/a/div[contains(.,'${pExpected}')]</arg>
+<arg>60s</arg>
+</arguments>
+<status status="PASS" endtime="20180320 12:50:00.162" starttime="20180320 12:50:00.154"></status>
+</kw>
+<status status="PASS" endtime="20180320 12:50:00.162" starttime="20180320 12:50:00.154"></status>
+</kw>
+<kw name="Verify Search Result">
+<arguments>
+<arg>2</arg>
+<arg>Test ladder 3</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>//*[@id="app-content"]/div[2]/div[2]/div/div[${pItem}]/div/div[2]/div[1]/a/div[contains(.,'${pExpected}')]</arg>
+<arg>60s</arg>
+</arguments>
+<status status="PASS" endtime="20180320 12:50:00.171" starttime="20180320 12:50:00.163"></status>
+</kw>
+<status status="PASS" endtime="20180320 12:50:00.171" starttime="20180320 12:50:00.162"></status>
+</kw>
+<kw name="Verify Search Result">
+<arguments>
+<arg>3</arg>
+<arg>Test ladder 1</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>//*[@id="app-content"]/div[2]/div[2]/div/div[${pItem}]/div/div[2]/div[1]/a/div[contains(.,'${pExpected}')]</arg>
+<arg>60s</arg>
+</arguments>
+<status status="PASS" endtime="20180320 12:50:00.180" starttime="20180320 12:50:00.172"></status>
+</kw>
+<status status="PASS" endtime="20180320 12:50:00.180" starttime="20180320 12:50:00.172"></status>
+</kw>
+<kw name="Verify Search Result">
+<arguments>
+<arg>4</arg>
+<arg>Test ladder 2</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>//*[@id="app-content"]/div[2]/div[2]/div/div[${pItem}]/div/div[2]/div[1]/a/div[contains(.,'${pExpected}')]</arg>
+<arg>60s</arg>
+</arguments>
+<status status="PASS" endtime="20180320 12:50:00.190" starttime="20180320 12:50:00.181"></status>
+</kw>
+<status status="PASS" endtime="20180320 12:50:00.190" starttime="20180320 12:50:00.181"></status>
+</kw>
+<status status="PASS" endtime="20180320 12:50:00.190" critical="yes" starttime="20180320 12:49:56.315"></status>
+</test>
+<test id="s1-t4" name="If Search invalid with login">
+<kw name="Enter Search Field">
+<arguments>
+<arg>fghjkljhgfghjk</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>//*[@id="desktopNavigationSearch"]</arg>
+<arg>${Search}</arg>
+</arguments>
+<msg timestamp="20180320 12:50:00.192" level="INFO">Typing text 'fghjkljhgfghjk' into text field '//*[@id="desktopNavigationSearch"]'</msg>
+<status status="PASS" endtime="20180320 12:50:00.365" starttime="20180320 12:50:00.192"></status>
+</kw>
+<status status="PASS" endtime="20180320 12:50:00.366" starttime="20180320 12:50:00.191"></status>
+</kw>
+<kw name="Click Search Button">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//*[@id="app"]/div[2]/div[2]/div[1]/div/div[1]/div/form/div[2]/strong[contains(.,"ค้นหา")]</arg>
+</arguments>
+<msg timestamp="20180320 12:50:00.367" level="INFO">Clicking element '//*[@id="app"]/div[2]/div[2]/div[1]/div/div[1]/div/form/div[2]/strong[contains(.,"ค้นหา")]'.</msg>
+<status status="PASS" endtime="20180320 12:50:00.467" starttime="20180320 12:50:00.366"></status>
+</kw>
+<status status="PASS" endtime="20180320 12:50:00.467" starttime="20180320 12:50:00.366"></status>
+</kw>
+<kw name="Verify Total Search Result">
+<arguments>
+<arg>fghjkljhgfghjk</arg>
+<arg>0</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>//*[@id="app-content"]/div[2]/div[1]/div/div/h2[contains(.,'ผลการค้นหา') and contains(.,'${ResultSearch} (${TotalSearch})')]</arg>
+<arg>60s</arg>
+</arguments>
+<status status="PASS" endtime="20180320 12:50:00.525" starttime="20180320 12:50:00.469"></status>
+</kw>
+<status status="PASS" endtime="20180320 12:50:00.525" starttime="20180320 12:50:00.468"></status>
+</kw>
+<status status="PASS" endtime="20180320 12:50:00.526" critical="yes" starttime="20180320 12:50:00.191"></status>
+</test>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20180320 12:50:00.643" starttime="20180320 12:50:00.527"></status>
+</kw>
+<status status="PASS" endtime="20180320 12:50:00.643" starttime="20180320 12:49:43.047"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="4">Critical Tests</stat>
+<stat fail="0" pass="4">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="SearchFastwork" pass="4">SearchFastwork</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20180320 12:49:43.148" level="ERROR">Error in file '/Users/thunchanokkongsatchaaree/Python27/test/Search/SearchFastwork.robot': Importing test library 'ImapLibrary' failed: ImportError: No module named ImapLibrary
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  /Library/Frameworks/Python.framework/Versions/2.7/bin
+  /Library/Frameworks/Python.framework/Versions/2.7/lib/python27.zip
+  /Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7
+  /Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/plat-darwin
+  /Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/plat-mac
+  /Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/plat-mac/lib-scriptpackages
+  /Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/lib-tk
+  /Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/lib-old
+  /Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/lib-dynload
+  /Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages</msg>
+</errors>
+</robot>
