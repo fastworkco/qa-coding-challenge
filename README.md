@@ -1,40 +1,13 @@
-<p align="center">
-  <img src="https://design.fastwork.co/_nuxt/img/fw-logo-full-mono-600x100.0dfad36.png" width="600">
-</p>
+Problem&Solution
+1. There is no ID for Element So I used XPath instead
+2. I Think there might be a Low Priority Bug but I’m not sure it’s a bug or not (May be it’s the requirement) >> On เข้าสู่ระบบ page, I need to click สมัครสมาชิก button 2 times to navigate to สมัครสมาชิก page successfully
 
-# { "Engineer": "Quality Assurance" } to FastWork
+Files
+There are 3 files for Robot Framework
+1. SearchFastwork.robot
+2. SigninFastwork.robot
+3. SignUpFastwork.robot
 
-Objective of this challenge is to evaluate your domain in **Quality Assurance**, that is, its organization, style and good practices with the code, knowledge of the frameworks and technologies used.
-
-## Rules
-
-1. Please **organize, design testcase, write test scipt** and deploy your code as if it were going into production, then send us a link to the hosted repository (e.g. Github, Bitbucket...).
-
-2. Develop automate testing using:
-    - Some UI testing framework. Suggestion: **Robot Framework** ;
-
-3. Submit the link of your repository with the challenge code.
-
-## The challenge
-
-- Design testcase and prepare test scipt to validate authentication process on [https://staging.fastwork.co](https://staging.fastwork.co) website **(sign up with email, sign in with email)**.
-- Design testcase and prepare test scipt to validate search system ex. [https://staging.fastwork.co/search?q=test](https://staging.fastwork.co/search?q=test)
-
-## Remark
-
-- Restore database from production to staging every night.
-
-## Readme
-
-Write your README as if it was for a production service. Include the following items:
-
-* Description of the problem and solution.
-* Reasoning behind your technical choices.
-
-## How we review
-
-Your application will be reviewed by the CTO and at least one senior engineer. We do take into consideration your experience level.
-
-## Doubts
-
-Send your questions directly to [ben@fastwork.co](mailto:ben@fastwork.co).
+Remark
+1. Actually, test cases and the Resource should be prepared separately but they aren't due to the time limitation
+2. Moreover, There should be more test cases but i need more time to prepare both test case and test script. So, the test cases and test scripts that I prepared only included necessary cases.
