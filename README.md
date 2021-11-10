@@ -10,20 +10,19 @@ Objective of this challenge is to evaluate your domain in **Quality Assurance**,
 
 1. Please **organize, design testcase, write test scipt** and deploy your code as if it were going into production, then send us a link to the hosted repository (e.g. Github, Bitbucket...).
 
-2. Develop automate testing using:
-    - Some UI testing framework. Suggestion: **Robot Framework** ;
+2. Develop automate testing using: **Robot Framework** ( Others tool are welcome as well)
 
 3. Submit the link of your repository with the challenge code.
 
 ## The challenge
 
-- Design testcase and prepare test scipt to validate authentication process on [https://staging.fastwork.co](https://staging.fastwork.co) website **(sign up with email, sign in with email)**.
-- Design testcase and prepare test scipt to validate search system ex. [https://staging.fastwork.co/search?q=test](https://staging.fastwork.co/search?q=test)
-
-## Remark
-
-- Restore database from production to staging every night.
-
+- Design testcase and prepare test scipt to validate authentication process on [https://staging.fastwork.co](https://staging.fastwork.co) website
+    1. Sign up with email
+    2. Sign up using google-login
+    3. Sign in with email account
+    4. Sign in using google-login
+- Design testcase and prepare test scipt to validate search system
+    - https://staging.fastwork.co/search 
 ## Readme
 
 Write your README as if it was for a production service. Include the following items:
