@@ -33,8 +33,8 @@ Write your README as if it was for a production service. Include the following i
 
 ## How we review
 
-Your application will be reviewed by the CTO and at least one senior engineer. We do take into consideration your experience level.
+Your application will be reviewed by the Development Manager& Senior QA. We do take into consideration your experience level.
 
 ## Doubts
 
-Send your questions directly to [ben@fastwork.co](mailto:ben@fastwork.co).
+Send your questions directly to [engineer-recruiting@fastwork.co](mailto:engineer-recruiting@fastwork.co).
